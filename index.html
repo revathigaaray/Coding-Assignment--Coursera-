@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Responsive Layout</title>
+<style>
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+p {
+  width: 90%;
+  height: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top:20px;
+  font-family: Helvetica;
+  color: white;
+}
+
+/* Simple Responsive Framework. */
+.row {
+
+	width: 100%; 
+}
+.header {
+	margin:0px auto;
+	margin-bottom:20px
+}
+.title {
+	position: absolute;
+    width: 100px;
+    height: 20px;
+    border: 1px solid black;
+    right: 0px;
+    top: 0px;
+    margin: 0 auto;
+    text-align: center;
+    border-right: 0px;
+    border-top: 0px;
+}
+
+.title#chicken {
+	background-color: yellow
+}
+.title#beef {
+	background-color: red
+}
+.title#sushi {
+	background-color: green
+}
+/********** Large devices only **********/
+@media (min-width: 992px) {
+  .section1, .section2, .section3  {
+  display:inline-block;
+	background-color: gray; /* standard background color */
+	border: 1px solid black; 
+	margin: 0 auto;
+	margin-left:1%;
+	position:relative;
+  }
+  .section1 {
+	width:32%
+  }
+  .section2 {
+	width:32%
+  }
+  .section3 {
+	width:32%
+  }
+}
+
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+    .section1, .section2, .section3{
+  display:inline-block;
+	background-color: gray; /* standard background color */
+	border: 1px solid black; 
+	margin-left:2%;
+	margin-right:2%;
+	position:relative;
+  }
+  .section1 {
+	width:45.5%
+  }
+  .section2 {
+	width:45.5%
+  }
+  .section3 {
+	width:95.5%;
+	margin-top:20px
+  }
+}
+
+/********** Medium devices only **********/
+@media (max-width: 767px){
+    .section1, .section2, .section3{
+	display:inline-block;
+	background-color: gray; /* standard background color */
+	border: 1px solid black; 
+	margin-left:2%;
+	margin-right:2%;
+	margin-bottom:20px;
+	position:relative;
+  }
+  .section1 {
+	width:96%
+  }
+  .section2 {
+	width:96%
+  }
+  .section3 {
+	width:96%
+  }
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+	<h1>Our Menu</h1>
+</div>
+
+<div class="row">
+  <div class="section1"><div class="title" id="chicken">Chicken</div><p>Item 1</p></div>
+  <div class="section2"><div class="title" id="beef">Beef</div><p>Item 2</p></div>
+  <div class="section3"><div class="title" id="sushi">Sushi</div><p>Item 3</p></div>
+
+</div>
+
+</body>
+</html>
